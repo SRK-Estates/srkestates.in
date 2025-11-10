@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SRK Estates - Your trusted partner in Real Estate Sales and Marketing across India">
+    <meta name="keywords" content="real estate, property marketing, India, sales, digital marketing">
+    <title>SRK Estates - Strategic Real Estate Marketing Partner</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-pattern {
+            background-color: #667eea;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v6h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .value-card {
+            transition: all 0.3s ease;
+        }
+        
+        .value-card:hover {
+            transform: scale(1.05);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #667eea;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <i class="bi bi-building text-3xl gradient-text"></i>
+                    <span class="ml-2 text-2xl font-bold gradient-text">SRK Estates</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-purple-600 font-medium">About</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Services</a>
+                    <a href="#values" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Values</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-purple-600">
+                        <i class="bi bi-list text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:bg-purple-50 hover:text-purple-600 rounded">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:bg-purple-50 hover:text-purple-600 rounded">About</a>
+                <a href="#services" class="block px-3 py-2 text-gray-700 hover:bg-purple-50 hover:text-purple-600 rounded">Services</a>
+                <a href="#values" class="block px-3 py-2 text-gray-700 hover:bg-purple-50 hover:text-purple-600 rounded">Values</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:bg-purple-50 hover:text-purple-600 rounded">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-pattern pt-24 pb-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center" data-aos="fade-up">
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
+                    Welcome to <span class="text-yellow-300">SRK Estates</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
+                    Your trusted partner in <strong>Real Estate Sales and Marketing</strong> across India
+                </p>
+                <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">
+                    We specialize in bringing together developers, property owners, and buyers through smart marketing, digital strategies, and strong market relationships.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#services" class="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-yellow-300 hover:text-purple-700 transition duration-300 shadow-lg">
+                        <i class="bi bi-briefcase mr-2"></i>Our Services
+                    </a>
+                    <a href="#contact" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition duration-300">
+                        <i class="bi bi-envelope mr-2"></i>Get in Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">About <span class="gradient-text">SRK Estates</span></h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-purple-400 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        At SRK Estates, we believe that real estate is more than property — it's about <strong>people, opportunities, and growth</strong>. As a strategic real estate marketing agency, we focus on connecting the right projects with the right audience.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        Our team works closely with developers and builders to position their projects effectively in competitive markets and drive qualified leads through modern marketing techniques.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        We operate with <strong>transparency, dedication</strong>, and a deep understanding of India's real estate landscape. Whether you are launching a new project or looking to accelerate sales for an existing one, SRK Estates ensures your brand and property reach their full potential.
+                    </p>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <div class="bg-gradient-to-br from-purple-600 to-purple-400 p-8 rounded-2xl shadow-2xl text-white">
+                        <div class="mb-8">
+                            <i class="bi bi-bullseye text-5xl mb-4"></i>
+                            <h3 class="text-2xl font-bold mb-3">Our Mission</h3>
+                            <p class="text-white/90">
+                                To redefine real estate marketing in India by providing innovative, result-driven, and ethical marketing solutions that help our clients achieve faster sales and sustainable growth.
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <i class="bi bi-eye text-5xl mb-4"></i>
+                            <h3 class="text-2xl font-bold mb-3">Our Vision</h3>
+                            <p class="text-white/90">
+                                To become India's most trusted and result-oriented strategic real estate marketing partner, empowering builders, developers, and investors through digital transformation and intelligent marketing solutions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section id="values" class="py-20 px-4 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Our Core <span class="gradient-text">Values</span></h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-purple-400 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
+                <div class="value-card bg-white p-6 rounded-xl shadow-lg text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="bi bi-shield-check text-3xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Integrity</h3>
+                    <p class="text-gray-600">We build long-term trust with honest and transparent practices.</p>
+                </div>
+                
+                <div class="value-card bg-white p-6 rounded-xl shadow-lg text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="bi bi-lightbulb text-3xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Innovation</h3>
+                    <p class="text-gray-600">We constantly adopt new tools, technologies, and ideas to stay ahead.</p>
+                </div>
+                
+                <div class="value-card bg-white p-6 rounded-xl shadow-lg text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="bi bi-heart text-3xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Commitment</h3>
+                    <p class="text-gray-600">We work with full dedication to achieve our clients' business goals.</p>
+                </div>
+                
+                <div class="value-card bg-white p-6 rounded-xl shadow-lg text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="bi bi-people text-3xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Collaboration</h3>
+                    <p class="text-gray-600">We believe success is achieved through strong partnerships.</p>
+                </div>
+                
+                <div class="value-card bg-white p-6 rounded-xl shadow-lg text-center" data-aos="fade-up" data-aos-delay="500">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="bi bi-star text-3xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Excellence</h3>
+                    <p class="text-gray-600">We aim for perfection in every marketing campaign we execute.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Our <span class="gradient-text">Services</span></h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-purple-400 mx-auto mb-4"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive real estate marketing solutions tailored to your needs
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white border-2 border-gray-100 p-8 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-gradient-to-br from-purple-600 to-purple-400 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="bi bi-graph-up-arrow text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Real Estate Sales & Marketing</h3>
+                    <p class="text-gray-600 mb-4">End-to-end marketing and sales solutions for real estate projects — from branding to closing deals.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="bi bi-check-circle-fill text-purple-600 mr-2 mt-1"></i>
+                            <span>Project Positioning & Strategy</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="bi bi-check-circle-fill text-purple-600 mr-2 mt-1"></i>
+                            <span>Sales Team Training & Management</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="bi bi-check-circle-fill text-purple-600 mr-2 mt-1"></i>
+                            <span>Market Research & Competitor Analysis</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="bi bi-check-circle-fill text-purple-600 mr-2 mt-1"></i>
+                            <span>Buyer Engagement & Conversion</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white border-2 border-gray-100 p-8 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-gradient-to-br from-purple-600 to-purple-400 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="bi bi-laptop text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Digital Marketing for Real Estate</h3>
+                    <p class="text-gray-600 mb-4">Build visibility, credibility, and lead flow through powerful online marketing campaigns.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="bi bi-check-circle-fill text-purple-600 mr-2 mt-1"></i>
+                            <span>Social Media Marketing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="bi bi-check-circle-fill text-purple-600 mr-2 mt-1"></i>
+                            <span>Google Ads & SEO Optimization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="bi bi-check-circle-fill text-purple-600 mr-2 mt-1"></i>
+                            <span>Website & Landing Page Creation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="bi bi-check-circle-fill text-purple-600 mr-2 mt-1"></i>
+                            <span>Video & Content Marketing</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white border-2 border-gray-100 p-8 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-gradient-to-br from-purple-600 to-purple-400 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="bi bi-diagram-3 text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Strategic Marketing Partner</h3>
+                    <p class="text-gray-600 mb-4">We become your marketing partner with strategies designed to integrate with your business objectives.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="bi bi-check-circle-fill text-purple-600 mr-2 mt-1"></i>
+                            <span>Branding & Identity Development</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="bi bi-check-circle-fill text-purple-600 mr-2 mt-1"></i>
+                            <span>Marketing Strategy Planning</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="bi bi-check-circle-fill text-purple-600 mr-2 mt-1"></i>
+                            <span>Campaign Analytics & Reporting</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="bi bi-check-circle-fill text-purple-600 mr-2 mt-1"></i>
+                            <span>Channel Partner Management</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white border-2 border-gray-100 p-8 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-gradient-to-br from-purple-600 to-purple-400 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="bi bi-rocket-takeoff text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Project Launch Campaigns</h3>
+                    <p class="text-gray-600 mb-4">From concept to conversion, we design and execute impactful launch campaigns that make your project stand out.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="bi bi-check-circle-fill text-purple-600 mr-2 mt-1"></i>
+                            <span>360° Pre-Launch & Launch Strategies</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="bi bi-check-circle-fill text-purple-600 mr-2 mt-1"></i>
+                            <span>Offline & Online Event Marketing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="bi bi-check-circle-fill text-purple-600 mr-2 mt-1"></i>
+                            <span>Creative Design & Collateral Production</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white border-2 border-gray-100 p-8 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="500">
+                    <div class="bg-gradient-to-br from-purple-600 to-purple-400 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="bi bi-clipboard-data text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Real Estate Consultancy</h3>
+                    <p class="text-gray-600 mb-4">We assist developers and investors in making informed, profitable decisions.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="bi bi-check-circle-fill text-purple-600 mr-2 mt-1"></i>
+                            <span>Market Feasibility Studies</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="bi bi-check-circle-fill text-purple-600 mr-2 mt-1"></i>
+                            <span>Project Branding Advice</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="bi bi-check-circle-fill text-purple-600 mr-2 mt-1"></i>
+                            <span>Channel Partner & Sales Network Expansion</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 px-4 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Why Choose <span class="gradient-text">SRK Estates</span></h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-purple-400 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-start">
+                        <i class="bi bi-award text-4xl text-purple-600 mr-4"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Deep Expertise</h3>
+                            <p class="text-gray-600">Deep expertise in the Indian real estate market.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-start">
+                        <i class="bi bi-person-workspace text-4xl text-purple-600 mr-4"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Dedicated Team</h3>
+                            <p class="text-gray-600">Dedicated marketing team for every project.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-start">
+                        <i class="bi bi-graph-up text-4xl text-purple-600 mr-4"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Transparent Reporting</h3>
+                            <p class="text-gray-600">Transparent performance tracking and reporting.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-start">
+                        <i class="bi bi-share text-4xl text-purple-600 mr-4"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Strong Network</h3>
+                            <p class="text-gray-600">Strong network of developers, agents, and investors.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="500">
+                    <div class="flex items-start">
+                        <i class="bi bi-trophy text-4xl text-purple-600 mr-4"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Proven Results</h3>
+                            <p class="text-gray-600">Proven results through innovative marketing solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Get in <span class="gradient-text">Touch</span></h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-purple-400 mx-auto mb-4"></div>
+                <p class="text-xl text-gray-600">Let's discuss how we can help grow your real estate business</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="bg-gradient-to-br from-purple-600 to-purple-400 p-10 rounded-2xl shadow-2xl text-white">
+                        <h3 class="text-3xl font-bold mb-8">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <i class="bi bi-geo-alt-fill text-3xl mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-1">Location</h4>
+                                    <p class="text-white/90">India</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="bi bi-envelope-fill text-3xl mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-1">Email</h4>
+                                    <a href="mailto:info@srkestates.in" class="text-white/90 hover:text-yellow-300 transition">info@srkestates.in</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="bi bi-telephone-fill text-3xl mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-1">Phone</h4>
+                                    <a href="tel:+91XXXXXXXXXX" class="text-white/90 hover:text-yellow-300 transition">+91-XXXXXXXXXX</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="bi bi-globe text-3xl mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-1">Website</h4>
+                                    <a href="https://srkestates.in" target="_blank" class="text-white/90 hover:text-yellow-300 transition">www.srkestates.in</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10">
+                            <h4 class="font-semibold text-lg mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-white/20 hover:bg-white/30 w-12 h-12 rounded-full flex items-center justify-center transition">
+                                    <i class="bi bi-facebook text-2xl"></i>
+                                </a>
+                                <a href="#" class="bg-white/20 hover:bg-white/30 w-12 h-12 rounded-full flex items-center justify-center transition">
+                                    <i class="bi bi-instagram text-2xl"></i>
+                                </a>
+                                <a href="#" class="bg-white/20 hover:bg-white/30 w-12 h-12 rounded-full flex items-center justify-center transition">
+                                    <i class="bi bi-linkedin text-2xl"></i>
+                                </a>
+                                <a href="#" class="bg-white/20 hover:bg-white/30 w-12 h-12 rounded-full flex items-center justify-center transition">
+                                    <i class="bi bi-twitter text-2xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Your Name</label>
+                            <input type="text" class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-purple-600 focus:outline-none transition" placeholder="John Doe">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Email Address</label>
+                            <input type="email" class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-purple-600 focus:outline-none transition" placeholder="john@example.com">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Phone Number</label>
+                            <input type="tel" class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-purple-600 focus:outline-none transition" placeholder="+91-XXXXXXXXXX">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-purple-600 focus:outline-none transition" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-purple-400 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition duration-300">
+                            <i class="bi bi-send mr-2"></i>Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="bi bi-building text-3xl text-purple-400"></i>
+                        <span class="ml-2 text-2xl font-bold">SRK Estates</span>
+                    </div>
+                    <p class="text-gray-400">Strategic Real Estate Marketing Partner</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-purple-400 transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-purple-400 transition">About</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-purple-400 transition">Services</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-purple-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="bi bi-envelope mr-2"></i>info@srkestates.in</li>
+                        <li><i class="bi bi-telephone mr-2"></i>+91-XXXXXXXXXX</li>
+                        <li><i class="bi bi-globe mr-2"></i>www.srkestates.in</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 SRK Estates. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="fixed bottom-8 right-8 bg-gradient-to-r from-purple-600 to-purple-400 text-white w-12 h-12 rounded-full shadow-lg hover:shadow-xl transition duration-300 hidden items-center justify-center z-40">
+        <i class="bi bi-arrow-up text-xl"></i>
+    </button>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.remove('hidden');
+                scrollTopBtn.classList.add('flex');
+            } else {
+                scrollTopBtn.classList.add('hidden');
+                scrollTopBtn.classList.remove('flex');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const targetPosition = target.offsetTop - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler (you can customize this)
+        const contactForm = document.querySelector('form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
